@@ -12,6 +12,12 @@ PyMBR is a simple module that allows the user to parse, manipulate or create MBR
 python setup.py install
 ```
 
+**or**
+``` sh
+pip install pymbr
+```
+
+
 ## Sample usage - Creating a simple MBR 
 ``` python
 import pymbr

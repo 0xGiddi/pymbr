@@ -7,6 +7,7 @@
 """
 from __future__ import print_function
 import struct
+from .bootrecord import ValidationError
 
 __all__ = ['PartitionTable', 'PartitionEntry', 'CHSTuple']
 

@@ -9,4 +9,6 @@
 __version__ = "1.0.0"
 
 from .bootrecord import *
+from .bootcode import *
+from .filesystem import Filesystem
 from .partition import *

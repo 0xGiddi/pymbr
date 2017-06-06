@@ -6,7 +6,7 @@
     :license: GPLv3, see LICENSE file for more details.
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.2"
 
 from .bootrecord import *
 from .bootcode import *

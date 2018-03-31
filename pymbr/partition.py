@@ -6,6 +6,7 @@
     :license: GPLv3, see LICENSE file for more details.
 """
 from __future__ import print_function
+from builtins import bytes
 import struct
 from .bootrecord import *
 
@@ -125,7 +126,7 @@ class PartitionTable(object):
 		if (len(tableData) / 16) not in [1,2,3,4]:
 			raise ValueError("Partiton table should be multiples of 16 in size")
 		partitions = {}
-		for idx in xrange(0, len(tableData), 16):
+		for idx in range(0, len(tableData), 16):
 			partitions[idx / 16] = PartitionEntry.parse(tableData[idx:idx + 16])
 
 		table = PartitionTable()
@@ -135,11 +136,11 @@ class PartitionTable(object):
 	def compose(self):
 		""" Compose a partition table into binary form """
 		self.validate()
-		ret = r""
+		ret = bytes()
 		for i, partition in self.partitions.items():
 			partition.validate()
 			ret += partition.compose()
-		return ret + ('\x00' * (64 - len(ret)))
+		return ret + bytes([0x00 for i in range(64 - len(ret))])
 
 
 	def validate(self):

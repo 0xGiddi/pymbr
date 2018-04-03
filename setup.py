@@ -39,7 +39,7 @@ with open('mbr.bin', 'wb') as file:
 
 setup(
 	name = 'pymbr',
-	version = '1.0.2',
+	version = '1.0.3',
 	description = 'A python module to manipulate and create MBRs.',
 	long_description = long_description,
 	url = 'https://github.com/0xGiddi/pymbr',
@@ -58,6 +58,8 @@ setup(
 		'Natural Language :: English',
 		'Programming Language :: Python :: 2',
 		'Programming Language :: Python :: 2.7',
+		'Programming Language :: Python :: 3',
+		'Programming Language :: Python :: 3.5',
 		'Operating System :: POSIX :: Linux',
 		'Operating System :: Microsoft',
 		'Topic :: System :: Boot',
